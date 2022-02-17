@@ -2,7 +2,7 @@ import argparse
 import logging
 import sys
 
-from eastfocus import __version__
+from eastfocus import __version__, stuff
 
 __author__ = "Taylor Monacelli"
 __copyright__ = "Taylor Monacelli"
@@ -11,17 +11,7 @@ __license__ = "MPL-2.0"
 _logger = logging.getLogger(__name__)
 
 
-def parse_args(args):
-    """Parse command line parameters
-
-    Args:
-      args (List[str]): command line parameters as list of strings
-          (for example  ``["--help"]``).
-
-    Returns:
-      :obj:`argparse.Namespace`: command line parameters namespace
-    """
-    parser = argparse.ArgumentParser(description="Just a Fibonacci demonstration")
+def add_common_args(parser):
     parser.add_argument(
         "--version",
         action="version",
@@ -43,6 +33,20 @@ def parse_args(args):
         action="store_const",
         const=logging.DEBUG,
     )
+
+
+def parse_args(args):
+    """Parse command line parameters
+
+    Args:
+      args (List[str]): command line parameters as list of strings
+          (for example  ``["--help"]``).
+
+    Returns:
+      :obj:`argparse.Namespace`: command line parameters namespace
+    """
+    parser = argparse.ArgumentParser(description="Just a Fibonacci demonstration")
+    add_common_args(parser)
     return parser.parse_args(args)
 
 
@@ -70,7 +74,8 @@ def main(args):
     """
     args = parse_args(args)
     setup_logging(args.loglevel)
-    _logger.debug("Starting crazy calculations...")
+    _logger.debug("Starting script...")
+    stuff.main(args)
     _logger.info("Script ends here")
 
 
