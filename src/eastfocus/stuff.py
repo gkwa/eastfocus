@@ -40,6 +40,16 @@ class DropboxPackage:
         return h.hexdigest()
 
 
+def add_arguments(parser):
+    parser.add_argument(
+        "-r",
+        "--release",
+        action="store_true",
+        default=False,
+        help="release this version to latest folder?",
+    )
+
+
 def download(dst_dir: pathlib.Path, package: DropboxPackage) -> None:
     pkgfile = dst_dir / package.filename
 
@@ -64,13 +74,7 @@ def create_package(url) -> DropboxPackage:
 def main(args):
     parser = argparse.ArgumentParser(description="Just a Fibonacci demonstration")
     skeleton.add_common_args(parser)
-    parser.add_argument(
-        "-r",
-        "--release",
-        action="store_true",
-        default=False,
-        help="release this version to latest folder?",
-    )
+    add_arguments(parser)
     args = parser.parse_args()
     skeleton.setup_logging(args.loglevel)
     conf = OmegaConf.load("config.yaml")

@@ -47,6 +47,7 @@ def parse_args(args):
     """
     parser = argparse.ArgumentParser(description="Just a Fibonacci demonstration")
     add_common_args(parser)
+    stuff.add_arguments(parser)
     return parser.parse_args(args)
 
 
