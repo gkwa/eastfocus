@@ -102,7 +102,7 @@ def main(args):
     orig = pathlib.Path.cwd()
     os.chdir(stage10)
 
-    zipfile = stage10 / "streamox_iris.zip"
+    zipfile = stage10 / "streambox_iris_macos.zip"
     zip_obj = zipmod.ZipFile(zipfile.name, "w")
     zip_obj.write(stage_path.name)
     zip_obj.close()
@@ -114,8 +114,11 @@ def main(args):
 
     latest.mkdir(exist_ok=True, parents=True)
     latest_macos.mkdir(exist_ok=True, parents=True)
+
+    # always deploy the guide to latest
     shutil.copy(guide, latest_macos)
 
+    # only deploy latest binary if we use --release
     if args.release:
         dir_util.copy_tree(str(vdir), str(latest_macos))
 
