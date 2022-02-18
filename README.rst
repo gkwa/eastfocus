@@ -1,15 +1,15 @@
 .. These are examples of badges you might want to add to your README:
    please update the URLs accordingly
 
-    .. image:: https://api.cirrus-ci.com/github/<USER>/eastfocus.svg?branch=main
+    .. image:: https://api.cirrus-ci.com/github/TaylorMonacelli/eastfocus.svg?branch=main
         :alt: Built Status
-        :target: https://cirrus-ci.com/github/<USER>/eastfocus
+        :target: https://cirrus-ci.com/github/TaylorMonacelli/eastfocus
     .. image:: https://readthedocs.org/projects/eastfocus/badge/?version=latest
         :alt: ReadTheDocs
         :target: https://eastfocus.readthedocs.io/en/stable/
-    .. image:: https://img.shields.io/coveralls/github/<USER>/eastfocus/main.svg
+    .. image:: https://img.shields.io/coveralls/github/TaylorMonacelli/eastfocus/main.svg
         :alt: Coveralls
-        :target: https://coveralls.io/r/<USER>/eastfocus
+        :target: https://coveralls.io/r/TaylorMonacelli/eastfocus
     .. image:: https://img.shields.io/pypi/v/eastfocus.svg
         :alt: PyPI-Server
         :target: https://pypi.org/project/eastfocus/
@@ -34,10 +34,9 @@ eastfocus
 =========
 
 
-    Add a short description here!
+    Helper script to deploy Streambox Iris for macOS.pkg to s3 bucket
 
 
-A longer description of your project goes here...
 
 
 .. _pyscaffold-notes:
