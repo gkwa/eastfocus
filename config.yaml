@@ -1,4 +1,7 @@
 release:
-  upstream_url: https://www.dropbox.com/s/pnkscnbdru4zbp4/Streambox%20Iris%20for%20macOS.1.1.4.pkg?dl=0
+  upstream_url: https://www.dropbox.com/s/p80ueam3kfhjhkr/Streambox%20Iris%20for%20macOS.1.1.7.pkg?dl=0
 previous_releases:
-  - "https://www.dropbox.com/s/1qj8sjxs7ecvxuo/Streambox%20Iris%20for%20macOS.1.1.3.pkg?dl=0"
+- https://www.dropbox.com/s/jyl42p5hsj7rrf9/Streambox%20Iris%20for%20macOS.1.1.6.pkg?dl=0
+- https://www.dropbox.com/s/ndp6tcu8t1ur2ug/Streambox%20Iris%20for%20macOS.1.1.5.pkg?dl=0
+- https://www.dropbox.com/s/pnkscnbdru4zbp4/Streambox%20Iris%20for%20macOS.1.1.4.pkg?dl=0
+- https://www.dropbox.com/s/1qj8sjxs7ecvxuo/Streambox%20Iris%20for%20macOS.1.1.3.pkg?dl=0
